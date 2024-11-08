@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <style>
-        /* Add your styles here */
+        div{
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            align-items:center;
+        }
+ .formContainer{
+    border:1px solid black;
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            align-items:center;
+            margin:8px;
+            width: 50%;
+            border-radius:10px;
+        }
     </style>
 </head>
 <body>
+@extends('navbar.index')
+
+@section('content')
+<div class="formContainer">
+
+
     <h1>Dashboard</h1>
     <p>Total Hotels: {{ $totalHotels }}</p>
     <p>Total Foods: {{ $totalFoods }}</p>
@@ -29,5 +50,7 @@
             @endforeach
         </tbody>
     </table>
+    </div>
+    @endsection
 </body>
 </html>
